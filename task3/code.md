@@ -12,7 +12,24 @@ Develop a Python program to calculate passenger fares for different routes and p
 8. Display revenue difference and discrepancy.
 9. Stop.
 ## 3. Flowchart
-5. Sample Input
+meramid
+```
+flowchart TD
+    A([Start]) --> B[Initialize passenger records and fares]
+    B --> C[Read passenger details]
+    C --> D[Calculate discounted fare]
+    D --> E[Add fare to expected revenue]
+    E --> F{More passengers?}
+    F -- Yes --> C
+    F -- No --> G[Enter collected revenue]
+    G --> H[Calculate revenue difference]
+    H --> I{Difference equals zero?}
+    I -- Yes --> J[Revenue reconciled]
+    I -- No --> K[Display surplus or shortage]
+    J --> L([Stop])
+    K --> L
+```
+## 5. Sample Input
 P101, Route A, Adult
 P102, Route B, Student
 P103, Route A, Senior
