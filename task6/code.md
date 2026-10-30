@@ -15,12 +15,22 @@ Develop a Python program to distribute library books among different branches ba
 11. Stop.
 ## 3.flowchart 
 ``` mermaid
-    A([Start]) --> B[Enter Book Stock and Demand]
-    B --> C[Check Branch Requirements]
-    C --> D[Allocate Books by Priority]
-    D --> E[Calculate Unmet Demand]
-    E --> F[Display Allocation Report]
-    F --> G([End])
+
+flowchart TD
+    A([Start]) --> B[Initialize book stock and requirements]
+    B --> C[Select branch by priority]
+    C --> D[Select required book]
+    D --> E[Compare stock with demand]
+    E --> F[Allocate available copies]
+    F --> G[Update book stock]
+    G --> H[Calculate unmet demand]
+    H --> I{More requirements?}
+    I -- Yes --> D
+    I -- No --> J{More branches?}
+    J -- Yes --> C
+    J -- No --> K[Display allocation summary]
+    K --> L([Stop])
+
 ```
 ## 5. Sample Input
 Available Books:
