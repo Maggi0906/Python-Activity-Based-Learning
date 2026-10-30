@@ -1,5 +1,5 @@
-Case Study 92: Multi-Event Sports Scheduling and Scoring
-1. Problem Statement
+## Case Study 92: Multi-Event Sports Scheduling and Scoring
+## 1. Problem Statement
 Develop a Python program to manage multiple sports events using lists and tuples. The program should store event schedules and team scores, identify scheduling conflicts, calculate the total points scored by each team, and generate final team rankings based on their total points.
 2. Algorithm
 1. Start the program.
@@ -11,8 +11,8 @@ Develop a Python program to manage multiple sports events using lists and tuples
 7. Display scheduling conflicts.
 8. Display total scores and final rankings.
 9. Stop the program.
-3. Flowchart
-mermaid
+## 3. Flowchart
+```mermaid
 flowchart TD
     A([Start]) --> B[Enter Event Schedules]
     B --> C[Check Scheduling Conflicts]
@@ -21,7 +21,8 @@ flowchart TD
     E --> F[Sort Teams by Points]
     F --> G[Display Conflicts and Rankings]
     G --> H([End])
-5. Sample Input
+```
+## 5. Sample Input
 Event Schedules:
 Cricket      10:00    Team A
 Football     10:00    Team B
@@ -35,7 +36,7 @@ Team C - 60
 Team A - 30
 Team B - 25
 Team C - 20
-6. Sample Output
+## 6. Sample Output
 SCHEDULING CONFLICTS
 No scheduling conflicts found
 TOTAL TEAM SCORES
