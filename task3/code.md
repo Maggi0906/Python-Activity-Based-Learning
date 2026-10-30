@@ -12,7 +12,8 @@ Develop a Python program to calculate passenger fares for different routes and p
 8. Display revenue difference and discrepancy.
 9. Stop.
 ## 3. Flowchart
-```meramid
+``` mermaid
+
 flowchart TD
     A([Start]) --> B[Initialize passenger records and fares]
     B --> C[Read passenger details]
