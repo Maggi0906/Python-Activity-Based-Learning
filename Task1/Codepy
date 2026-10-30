@@ -1,1 +1,38 @@
-
+records = [
+    "STU101,YESHWITHA,IT,2026",
+    "STU102,RAHUL,CSE,2026",
+    "STU103,PRIYA,IT,2026",
+    "STU101,ANU,EEE,2026",
+    "STU104,AB,ME,2026",
+    "INVALID"
+]
+seen = set()
+duplicates = []
+valid_records = []
+errors = []
+for record in records:
+    fields = record.split(",")
+    if len(fields) != 4:
+        errors.append((record, "Incorrect number of fields"))
+        continue
+    sid, name, branch, year = fields
+    if len(sid) != 6:
+        errors.append((record, "Invalid ID length"))
+    elif not name.isalpha() or len(name) < 3:
+        errors.append((record, "Invalid name"))
+    elif branch not in ["IT", "CSE", "EEE", "ME"]:
+        errors.append((record, "Invalid branch"))
+    elif len(year) != 4 or not year.isdigit():
+        errors.append((record, "Invalid year"))
+    elif sid in seen:
+        duplicates.append(sid)
+    else:
+        seen.add(sid)
+        valid_records.append((sid, name, branch, year))
+print("VALID RECORDS:")
+for item in valid_records:
+    print(item)
+print("\nDUPLICATE IDS:", duplicates)
+print("\nERROR REPORT:")
+for error in errors:
+    print(error)
