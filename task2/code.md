@@ -13,6 +13,14 @@ Develop a Python program to manage multiple sports events using lists and tuples
 9. Stop the program.
 3. Flowchart
 mermaid
+flowchart TD
+    A([Start]) --> B[Enter Event Schedules]
+    B --> C[Check Scheduling Conflicts]
+    C --> D[Enter Team Scores]
+    D --> E[Calculate Total Points]
+    E --> F[Sort Teams by Points]
+    F --> G[Display Conflicts and Rankings]
+    G --> H([End])
 5. Sample Input
 Event Schedules:
 Cricket      10:00    Team A
