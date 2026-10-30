@@ -14,7 +14,6 @@ Develop a Python program to distribute disaster relief supplies among different 
 10. Stop.
 ## 3. Flowchart
 ``` meramid
-
 flowchart TD
     A([Start]) --> B[Initialize stock and area requirements]
     B --> C[Select highest priority area]
