@@ -24,38 +24,22 @@ The program uses strings, split(), conditional statements, loops, lists, and set
 ## 3. Flowchart
 ```mermaid
 flowchart TD
-    A([Start]) --> B[Initialize Registration Records]
-    B --> C[Create Valid, Duplicate and Error Lists]
-    C --> D[Read Registration Record]
-    D --> E[Split Record into Fields]
-    E --> F{Exactly Four Fields?}
-    F -- No --> G[Classify Incorrect Field Count]
-    F -- Yes --> H[Validate Registration ID]
-    H --> I{ID Length is Six?}
-    I -- No --> J[Classify Invalid ID]
-    I -- Yes --> K[Validate Student Name]
-    K --> L{Name Valid?}
-    L -- No --> M[Classify Invalid Name]
-    L -- Yes --> N[Validate Branch]
-    N --> O{Valid Branch?}
-    O -- No --> P[Classify Invalid Branch]
-    O -- Yes --> Q[Validate Year]
-    Q --> R{Four Digit Year?}
-    R -- No --> S[Classify Invalid Year]
-    R -- Yes --> T{ID Already Exists?}
-    T -- Yes --> U[Store Duplicate ID]
-    T -- No --> V[Store Valid Record]
-    G --> W{More Records?}
-    J --> W
-    M --> W
-    P --> W
-    S --> W
-    U --> W
-    V --> W
-    W -- Yes --> D
-    W -- No --> X[Display Valid Records]
-    X --> Y[Display Duplicates and Errors]
-    Y --> Z([Stop])
+    A([Start]) --> B[Read Registration Records]
+    B --> C[Split Each Record]
+    C --> D{Valid Fields?}
+    D -- No --> E[Store Error]
+    D -- Yes --> F{Valid Details?}
+    F -- No --> E
+    F -- Yes --> G{Duplicate ID?}
+    G -- Yes --> H[Store Duplicate]
+    G -- No --> I[Store Valid Record]
+    E --> J{More Records?}
+    H --> J
+    I --> J
+    J -- Yes --> C
+    J -- No --> K[Display Results]
+    K --> L([End])
+   
 ```
 ## 5. Sample Input
 The following registration records are given as input:
