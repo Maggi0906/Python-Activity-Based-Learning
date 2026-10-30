@@ -15,6 +15,7 @@ Develop a Python program to analyze raw material availability, production requir
 11. Stop.
 ## 3.flowchart
 ``` mermaid
+   flowchart TD
     A([Start]) --> B[Enter Materials and Production Data]
     B --> C[Check Demand and Defects]
     C --> D{Production Feasible?}
