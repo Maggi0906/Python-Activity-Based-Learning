@@ -13,8 +13,22 @@ Develop a Python program to distribute disaster relief supplies among different 
 9. Display allocation details.
 10. Stop.
 ## 3. Flowchart
+``` meramid
 
-## 5. Sample Input
+flowchart TD
+    A([Start]) --> B[Initialize stock and area requirements]
+    B --> C[Select highest priority area]
+    C --> D[Select required supply]
+    D --> E[Compare stock and demand]
+    E --> F[Allocate minimum available quantity]
+    F --> G[Update remaining stock]
+    G --> H[Calculate unmet demand]
+    H --> I{More supplies or areas?}
+    I -- Yes --> D
+    I -- No --> J[Display allocation summary]
+    J --> K([Stop])
+```
+##  5. Sample Input
 Available Stock:
 Food: 100
 Water: 150
@@ -24,7 +38,7 @@ Area A: Food 50, Water 70, Medicine 30
 Area B: Food 40, Water 60, Medicine 40
 Area C: Food 30, Water 50, Medicine 20
 Priority: Area A, Area B, Area C
-## 6. Sample Output
+##  6. Sample Output
 DISASTER RELIEF ALLOCATION
 Area A
 Food Required: 50
