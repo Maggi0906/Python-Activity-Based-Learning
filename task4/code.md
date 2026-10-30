@@ -12,8 +12,8 @@ Develop a Python program to distribute disaster relief supplies among different 
 8. Calculate unmet demand and remaining stock.
 9. Display allocation details.
 10. Stop.
-## 3. Flowchart
-``` meramid
+## 3. FlOWCHART
+``` mermaid
 flowchart TD
     A([Start]) --> B[Initialize stock and area requirements]
     B --> C[Select highest priority area]
