@@ -12,14 +12,14 @@ Develop a Python program to manage campus maintenance reports based on severity,
 8. Display the ranked maintenance report.
 9. Stop.
 ## 3. Flowchart
+``` mermaid
 ## 5. Sample Input
 I101, Electrical Failure, High, Block A, 5
 I102, Water Leakage, Medium, Block B, 3
 I103, Network Failure, High, Lab, 4
 I104, Broken Chair, Low, Classroom, 2
 I105, Fire Alarm Failure, Critical, Block C, 5
-
-
+```
 ## 6. Sample Output
 CAMPUS INCIDENT PRIORITY REPORT
 
