@@ -12,7 +12,17 @@ Develop a Python program to evaluate students' academic progression by checking 
 8. Stop the program.
 ## 3. Flowchart
 ``` mermaid
-
+flowchart TD
+    A([Start]) --> B[Enter Student Details]
+    B --> C[Check Subject Marks]
+    C --> D[Check Attendance and Prerequisites]
+    D --> E{All Conditions Satisfied?}
+    E -- Yes --> F[Eligible for Next Semester]
+    E -- No --> G[Display Pending Requirements]
+    F --> H[Display Final Report]
+    G --> H
+    H --> I([End])
+```
 ## 5. Sample Input
 Enter Student Name: Yeshwitha
 Enter marks in Python: 65
